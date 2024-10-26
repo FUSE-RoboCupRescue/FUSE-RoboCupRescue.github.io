@@ -13,7 +13,7 @@ export default function Home() {
           src="/fuse_webpage/robot_lowres.jpg"
           width={1080}
           height={1080}
-          className="flex max-h-[540px] max-w-[540px] object-contain "
+          className="flex max-h-[540px] max-w-[540px] object-contain border-4 border-colors-grey_dark transition-transform duration-300 hover:scale-110"
           alt="robotPHRYNE" />
       </div>
 

@@ -12,7 +12,7 @@ export default function Home() {
             src="/fuse_webpage/team_lowres.jpg"
             width={1080}
             height={1080}
-            className="max-h-[540px] max-w-[540px] object-contain top-0 left-0 border-4 border-colors-grey_dark"
+            className="max-h-[540px] max-w-[540px] object-contain top-0 left-0 border-4 border-colors-grey_dark transition-transform duration-300 hover:scale-110"
             alt="team_photo" />
           <h1>From left to right: Eckart, Denis, Woraphon, Phumin, Harry (Not included in the image: Patthicha)</h1>
       </div>
