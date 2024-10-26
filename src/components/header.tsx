@@ -12,16 +12,23 @@ export default function Header() {
 
     return(
         <div>
-        <div>
+        <div className='flex justify-between bg-colors-grey_dark'>
             <Image 
-            src="fuse_webpage/banner.png"
-            width={1400}
-            height={360}
-            className="max-h-[250px] w-full object-cover top-0 left-0"
-            alt="banner_pic" />
+            src="/fuse_webpage/banner_left.png"
+            width={500}
+            height={200}
+            className="max-h-[200px] max-w-[500px] object-contain top-0 left-0"
+            alt="banner_left" />
+
+            <Image 
+            src="/fuse_webpage/banner_right.png"
+            width={350}
+            height={200}
+            className="max-h-[200px] max-w-[350px] object-contain top-0 left-0"
+            alt="banner_right" />
         </div>
 
-        <nav className="font-sans text-white bg-colors-grey_dark text-2xl p-4">
+        <nav className="font-sans text-white bg-colors-black text-2xl p-4">
             <div className='flex justify-between'>
                 <ul className="grid grid-flow-col gap-10 text-center items-center">
                     <li><Link href="/" data-translate="nav-home">Home</Link></li>

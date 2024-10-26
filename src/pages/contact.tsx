@@ -1,10 +1,44 @@
-// import Image from "next/image";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid gap-4 grid-cols-2 grid-rows-2">
      
-        contact
+        <div>
+        <Image 
+            src="/fuse_webpage/dummy_prof.png"
+            width={640}
+            height={640}
+            className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
+            alt="banner_left" />
+        </div>
+
+        <div>
+        <Image 
+            src="/fuse_webpage/dummy_prof.png"
+            width={640}
+            height={640}
+            className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
+            alt="banner_left" />
+        </div>
+
+        <div>
+        <Image 
+            src="/fuse_webpage/dummy_prof.png"
+            width={640}
+            height={640}
+            className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
+            alt="banner_left" />
+        </div>
+
+        <div>
+        <Image 
+            src="/fuse_webpage/dummy_prof.png"
+            width={640}
+            height={640}
+            className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
+            alt="banner_left" />
+        </div>
 
     </div>
   );
