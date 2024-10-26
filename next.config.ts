@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
     *
     * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
     */
-   basePath: "/FUSE-RoboCupRescue",
+   basePath: "/fuse_webpage",
  
    /**
     * Disable server-based image optimization. Next.js does not support
