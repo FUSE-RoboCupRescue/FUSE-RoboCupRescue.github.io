@@ -1,36 +1,40 @@
 "use client";
 
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image';
 
 export default function Header() {
     const [language, setLanguage] = useState('EN');
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const handleLanguageChange = (lang: string) => {
         setLanguage(lang);
         // Here, you can implement additional logic to change the website's language, such as updating a language context or using i18n libraries.
     };
 
+    useEffect(() => {
+        const banner = document.getElementById('banner');
+        if (!banner) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                // Set isScrolled to true if the banner is not intersecting (out of view)
+                setIsScrolled(!entry.isIntersecting);
+            },
+            {
+                root: null, 
+                threshold: 0, 
+            }
+        );
+        observer.observe(banner);
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
     return(
-        <section className='font-aileron font-light'>
-        <div className='flex justify-between bg-colors-grey_dark'>
-            <Image 
-            src="/fuse_webpage/banner_left.png"
-            width={500}
-            height={200}
-            className="max-h-[200px] max-w-[500px] object-contain top-0 left-0"
-            alt="banner_left" />
-
-            <Image 
-            src="/fuse_webpage/banner_right.png"
-            width={350}
-            height={200}
-            className="max-h-[200px] max-w-[350px] object-contain top-0 left-0"
-            alt="banner_right" />
-        </div>
-
-        <nav className=" text-white bg-colors-black text-lg py-4 px-7">
+    <section className={`font-aileron font-light z-50 sticky top-0 transition-colors duration-300 ${isScrolled ? 'bg-colors-grey_dark/70' : 'bg-colors-black'}`}>        
+    <nav className="text-white text-lg py-4 px-7">
             <div className='flex justify-between'>
                 <ul className="grid grid-flow-col gap-10 text-center items-center uppercase">
                     <li><Link href="/" data-translate="nav-home">Home</Link></li>
