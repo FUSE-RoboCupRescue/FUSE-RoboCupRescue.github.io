@@ -6,13 +6,18 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps) {
-    
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <div>
-    <Header></Header>
-    <main>{children}</main>
-    <Footer></Footer>
-    </div>
+    <html lang="en">
+     <body className='bg-colors-grey_light'>
+     <Header></Header>
+     {children}
+     <Footer></Footer>
+     </body>
+    </html>
   );
 }

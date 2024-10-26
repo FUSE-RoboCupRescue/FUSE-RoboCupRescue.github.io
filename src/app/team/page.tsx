@@ -3,22 +3,22 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col my-5 mx-[25rem]">
+    <div className="flex flex-col my-5 mx-[25rem] font-aileron">
 
-      <h1 className="font-serif font-semibold text-7xl text-colors-black text-center">TEAM</h1>
+      <h1 className="font-bold text-7xl text-colors-black text-center">TEAM</h1>
 
-      <div className="flex flex-col text-sm font-sans justify-center items-center mt-5">
+      <div className="flex flex-col text-sm justify-center items-center mt-5 font-normal">
           <Image 
             src="/fuse_webpage/team_lowres.jpg"
             width={1080}
             height={1080}
-            className="max-h-[540px] max-w-[540px] object-contain top-0 left-0"
+            className="max-h-[540px] max-w-[540px] object-contain top-0 left-0 border-4 border-colors-grey_dark"
             alt="team_photo" />
           <h1>From left to right: Eckart, Denis, Woraphon, Phumin, Harry (Not included in the image: Patthicha)</h1>
       </div>
 
 
-      <div className="font-sans text-base mt-5">
+      <div className="font-normal text-lg mt-5">
         <p>Our team is made up of dedicated students from TU Berlin, each bringing expertise in a variety of fields, including: </p>
         <ul className="list-disc ml-10">
           <li>Woraphon Choaywong, B.Sc. Computer Engineering</li>

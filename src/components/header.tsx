@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode, useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image';
@@ -11,7 +13,7 @@ export default function Header() {
     };
 
     return(
-        <div>
+        <section className='font-aileron font-light'>
         <div className='flex justify-between bg-colors-grey_dark'>
             <Image 
             src="/fuse_webpage/banner_left.png"
@@ -28,7 +30,7 @@ export default function Header() {
             alt="banner_right" />
         </div>
 
-        <nav className="font-serif text-white bg-colors-black text-lg py-4 px-7">
+        <nav className=" text-white bg-colors-black text-lg py-4 px-7">
             <div className='flex justify-between'>
                 <ul className="grid grid-flow-col gap-10 text-center items-center uppercase">
                     <li><Link href="/" data-translate="nav-home">Home</Link></li>
@@ -37,7 +39,7 @@ export default function Header() {
                     <li><Link href="/sponsors" data-translate="nav-sponsors">Sponsors</Link></li> 
                     <li><Link href="/contact" data-translate="nav-contact">Contact</Link></li>
                 </ul>
-                <div className='className="language-switch font-serif flex space-x-2 text-xl'>
+                <div className='className="language-switch flex space-x-2 text-xl'>
                     <button
                         className={`px-4 py-2 rounded ${
                         language === 'EN' ? 'bg-gray-200 text-black' : 'bg-colors-grey_dark text-white'
@@ -57,6 +59,6 @@ export default function Header() {
                 </div>
             </div>
         </nav>
-        </div>
+        </section>
     );
 }

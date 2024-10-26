@@ -4,20 +4,3 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root {
-  --background: white;
-  --foreground: black;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: white;
-    --foreground: black;
-  }
-}
-
-body {
-  color: black;
-  background: white;
-}

@@ -21,7 +21,7 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ['aileron'],
+        aileron: ['aileron', 'sans-serif'],
         serif: ['Helvetica']
       },
     },

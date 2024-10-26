@@ -4,13 +4,13 @@ import Link from "next/link";
 export default function Home() {
   return (
 
-    <div className="flex flex-col mx-[25rem] my-5">
+    <div className="flex flex-col mx-[25rem] my-5 font-aileron">
 
-      <h1 className="font-serif font-semibold text-7xl text-colors-black text-center">CONTACT</h1>
+      <h1 className="font-bold text-7xl text-colors-black text-center">CONTACT</h1>
 
-      <div className="grid gap-4 grid-cols-2 grid-rows-2 my-5">
+      <div className="grid gap-4 grid-cols-2 grid-rows-2 my-5 font-normal">
       
-          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center">
+          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white">
           <Image 
               src="/fuse_webpage/dummy_prof.png"
               width={640}
@@ -23,7 +23,7 @@ export default function Home() {
           
           </div>
 
-          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center">
+          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white">
           <Image 
               src="/fuse_webpage/dummy_prof.png"
               width={640}
@@ -35,7 +35,7 @@ export default function Home() {
           <Link href='mailto:d.shcherba@campus.tu-berlin.de'>d.shcherba@campus.tu-berlin.de</Link>
           </div>
 
-          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center">
+          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white">
           <Image 
               src="/fuse_webpage/dummy_prof.png"
               width={640}
@@ -47,7 +47,7 @@ export default function Home() {
           <Link href='mailto:cobo-briesewitz@campus.tu-berlin.de'>cobo-briesewitz@campus.tu-berlin.de</Link>
           </div>
 
-          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center">
+          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white">
           <Image 
               src="/fuse_webpage/dummy_prof.png"
               width={640}
@@ -59,7 +59,7 @@ export default function Home() {
           <Link href='mailto:p.mahakijdechachai@campus.tu-berlin.de'>p.mahakijdechachai@campus.tu-berlin.de</Link>
           </div>
 
-          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center">
+          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white">
           <Image 
               src="/fuse_webpage/dummy_prof.png"
               width={640}
@@ -71,7 +71,7 @@ export default function Home() {
           <Link href='mailto:h.bason@campus.tu-berlin.de'>h.bason@campus.tu-berlin.de</Link>
           </div>
 
-          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center">
+          <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white">
           <Image 
               src="/fuse_webpage/dummy_prof.png"
               width={640}

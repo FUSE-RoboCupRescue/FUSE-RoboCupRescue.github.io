@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col my-5 mx-[25rem]">
+    <div className="flex flex-col my-5 mx-[25rem] font-aileron">
 
-    <h1 className="font-serif font-semibold text-7xl text-colors-black text-center">Team FUSE</h1>
+    <h1 className="font-bold text-7xl text-colors-black text-center">Team FUSE</h1>
 
     
-      <div className="flex flex-col text-sm font-sans justify-center items-center mt-5">
+      <div className="flex flex-col text-sm justify-center items-center mt-5">
         <Image 
           src="/fuse_webpage/robot_lowres.jpg"
           width={1080}
@@ -17,7 +17,7 @@ export default function Home() {
       </div>
 
 
-      <div className="font-sans text-base mt-5">
+      <div className="text-base mt-5">
         <p>Demo text</p>
       </div>
   
