@@ -28,9 +28,9 @@ export default function Header() {
             alt="banner_right" />
         </div>
 
-        <nav className="font-serif text-white bg-colors-black text-xl p-2 px-5">
+        <nav className="font-serif text-white bg-colors-black text-lg py-4 px-7">
             <div className='flex justify-between'>
-                <ul className="grid grid-flow-col gap-10 text-center items-center">
+                <ul className="grid grid-flow-col gap-10 text-center items-center uppercase">
                     <li><Link href="/" data-translate="nav-home">Home</Link></li>
                     <li><Link href="/team" data-translate="nav-team">The Team</Link></li>
                     <li><Link href="/robot" data-translate="nav-robots">Robots</Link></li>
