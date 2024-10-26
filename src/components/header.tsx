@@ -28,7 +28,7 @@ export default function Header() {
             alt="banner_right" />
         </div>
 
-        <nav className="font-sans text-white bg-colors-black text-2xl p-4">
+        <nav className="font-serif text-white bg-colors-black text-xl p-2 px-5">
             <div className='flex justify-between'>
                 <ul className="grid grid-flow-col gap-10 text-center items-center">
                     <li><Link href="/" data-translate="nav-home">Home</Link></li>

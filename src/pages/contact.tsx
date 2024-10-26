@@ -62,7 +62,7 @@ export default function Home() {
             className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
             alt="person3" />
         <h1>Harry Bason</h1>
-        <h1>Mechanical Designs</h1>
+        <h1>Mechanical Design</h1>
         <Link href='mailto:h.bason@campus.tu-berlin.de'>h.bason@campus.tu-berlin.de</Link>
         </div>
 
@@ -74,7 +74,7 @@ export default function Home() {
             className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
             alt="person4" />
         <h1>Phumin Lertpredanan</h1>
-        <h1>Electronics Designs</h1>
+        <h1>Electronics Design</h1>
         <Link href='mailto:p.lertpredanan@campus.tu-berlin.de'>p.lertpredanan@campus.tu-berlin.de</Link>
         </div>
 
