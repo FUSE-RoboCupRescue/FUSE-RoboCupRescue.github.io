@@ -20,9 +20,9 @@ export default function Home() {
       <div className="text-base mt-5 space-y-8">
         <h1 className="font-bold text-3xl text-colors-black text-center">Our Idea</h1>
         <p className="text-center px-4 md:px-8">
-            We are <strong>FUSE</strong>, a dedicated team of students from the Technical University of Berlin, working together to push the boundaries of robotics technology.
-            Our focus is on developing advanced robotic solutions tailored for high-stakes, real-world scenarios. This year, our team is gearing up to participate in the 
-            <strong>RoboCup Rescue 2025 competition</strong>, which will be held in March 2025.
+          We are <strong>FUSE</strong>, a dedicated team of students from the Technical University of Berlin, working together to push the boundaries of robotics technology.
+          We are currently focused on developing an innovative robot to participate in the upcoming 
+          <strong> RoboCup Rescue 2025 competition</strong> in March 2025.
         </p>
 
         <h1 className="font-bold text-3xl text-colors-black text-center mt-8">Our Mission</h1>
