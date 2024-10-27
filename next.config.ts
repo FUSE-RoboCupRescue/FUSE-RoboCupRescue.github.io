@@ -15,7 +15,6 @@ const nextConfig: NextConfig = {
    *
    * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
    */
-  basePath: "", // Remove or set to an empty string for root-level deployment
 
   /**
    * Disable server-based image optimization. Next.js does not support
