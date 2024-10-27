@@ -9,7 +9,7 @@ export default function Home() {
 
       <div className="flex flex-col text-sm justify-center items-center mt-5 font-normal">
           <Image 
-            src="/fuse_webpage/team_lowres.jpg"
+            src="./team_lowres.jpg"
             width={1080}
             height={1080}
             className="max-h-[540px] max-w-[540px] object-contain top-0 left-0 border-4 border-colors-grey_dark transition-transform duration-300 hover:scale-110"

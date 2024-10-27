@@ -16,7 +16,7 @@ export default function Home() {
       
             <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
             <Image 
-                src="/fuse_webpage/dummy_prof.png"
+                src="./dummy_prof.png"
                 width={640}
                 height={640}
                 className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
@@ -29,7 +29,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
             <Image 
-                src="/fuse_webpage/dummy_prof.png"
+                src="./dummy_prof.png"
                 width={640}
                 height={640}
                 className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
@@ -41,7 +41,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
             <Image 
-                src="/fuse_webpage/dummy_prof.png"
+                src="./dummy_prof.png"
                 width={640}
                 height={640}
                 className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
@@ -53,7 +53,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
             <Image 
-                src="/fuse_webpage/dummy_prof.png"
+                src="./dummy_prof.png"
                 width={640}
                 height={640}
                 className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
@@ -65,7 +65,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
             <Image 
-                src="/fuse_webpage/dummy_prof.png"
+                src="./dummy_prof.png"
                 width={640}
                 height={640}
                 className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"
@@ -77,7 +77,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
             <Image 
-                src="/fuse_webpage/dummy_prof.png"
+                src="./dummy_prof.png"
                 width={640}
                 height={640}
                 className="max-h-[320px] max-w-[320px] object-contain top-0 left-0"

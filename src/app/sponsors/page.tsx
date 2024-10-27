@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex flex-col items-center border-4 border-colors-grey_dark bg-colors-white rounded max-w-[350px] my-3 justify-self-center">
             <Link href="https://argmin.lis.tu-berlin.de/" target="_blank">
             <Image 
-                src="/fuse_webpage/lis_logo.png"
+                src="./lis_logo.png"
                 width={360}
                 height={360}
                 className="max-h-[360px] max-w-[360px] object-contain top-0 left-0 "
@@ -20,7 +20,7 @@ export default function Home() {
           <div className="flex flex-col items-center border-4 border-colors-grey_dark bg-colors-white rounded max-w-[350px] my-3 justify-self-center">
             <Link href="https://www.tu.berlin/" target="_blank">
             <Image 
-                src="/fuse_webpage/tub_logo.png"
+                src="./tub_logo.png"
                 width={360}
                 height={360}
                 className="max-h-[360px] max-w-[360px] object-contain top-0 left-0 "
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="flex flex-col items-center border-4 border-colors-grey_dark bg-colors-white rounded max-w-[350px] my-3 justify-self-center">
             <Link href="https://www.maxongroup.com/de-de" target="_blank">
             <Image 
-                src="/fuse_webpage/maxon_logo.png"
+                src="./maxon_logo.png"
                 width={360}
                 height={360}
                 className="max-h-[360px] max-w-[360px] object-contain top-0 left-0 "
@@ -40,7 +40,7 @@ export default function Home() {
           <div className="flex flex-col items-center border-4 border-colors-grey_dark bg-colors-white rounded max-w-[350px] my-3 justify-self-center">
             <Link href="https://www.maedler.de/" target="_blank">
             <Image 
-                src="/fuse_webpage/maedler_logo.png"
+                src="./maedler_logo.png"
                 width={360}
                 height={360}
                 className="max-h-[360px] max-w-[360px] object-contain top-0 left-0 "
