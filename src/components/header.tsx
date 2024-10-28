@@ -43,7 +43,7 @@ export default function Header() {
                     <li><Link href="/contact" data-translate="nav-contact">Contact</Link></li>
                 </ul>
                 <div className='className="language-switch flex space-x-2 text-xl'>
-                    <button
+                    {/* <button
                         className={`px-4 py-2 rounded ${
                         language === 'EN' ? 'bg-gray-200 text-black' : 'bg-colors-grey_dark text-white'
                         }`}
@@ -58,7 +58,7 @@ export default function Header() {
                         onClick={() => handleLanguageChange('DE')}
                     >
                         DE
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </nav>

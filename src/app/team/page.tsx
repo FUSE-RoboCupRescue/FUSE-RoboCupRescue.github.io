@@ -1,13 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col my-5 mx-[25rem] font-helvetica">
+    <div className="flex flex-col my-5 mx-[25rem] font-helvetica space-y-8">
 
       <h1 className="font-bold text-7xl text-colors-black text-center">TEAM</h1>
 
-      <div className="flex flex-col text-sm justify-center items-center mt-5 font-normal">
+      <div className="flex flex-col text-sm justify-center items-center font-normal">
           <Image 
             src="./team_lowres.jpg"
             width={1080}
@@ -16,7 +15,6 @@ export default function Home() {
             alt="team_photo" />
           <h1>From left to right: Eckart, Denis, Woraphon, Phumin, Harry (Not included in the image: Patthicha)</h1>
       </div>
-
 
       <div className="mt-5">
         <p>Our team is made up of dedicated students from TU Berlin, each bringing expertise in a variety of fields, including: </p>
