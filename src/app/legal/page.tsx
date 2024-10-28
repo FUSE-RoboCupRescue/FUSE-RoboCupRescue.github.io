@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col my-5 mx-[25rem] font-aileron">
+    <div className="flex flex-col my-5 mx-[25rem] font-helvetica">
       <div className="flex flex-col text-sm justify-center items-center mt-5">
         {/* Andere Inhalte hier */}
       </div>
@@ -16,7 +16,7 @@ export default function Home() {
           <h2 className="font-bold text-3xl text-colors-black text-center mt-8">Impressum</h2>
           <p>Angaben gemäß § 5 TMG</p>
           <p>
-            <strong>FUSE Robotics e.V.</strong><br />
+            <strong>FUSE e.V.</strong><br />
             Technische Universität Berlin<br />
             Straße des 17. Juni 135<br />
             10623 Berlin, Deutschland
@@ -31,7 +31,7 @@ export default function Home() {
           <p>
             Eintragung im Vereinsregister.<br />
             Registergericht: Amtsgericht Berlin-Charlottenburg<br />
-            Registernummer: VR [Vereinsregisternummer einfügen]
+            Registernummer: VR 41220 B
           </p>
           <p><strong>Haftungsausschluss:</strong></p>
           <p>

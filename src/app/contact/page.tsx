@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
 
-    <div className="flex flex-col mx-[25rem] my-5 font-aileron">
+    <div className="flex flex-col mx-[25rem] my-5 font-helvetica">
 
         <h1 className="font-bold text-7xl text-colors-black text-center">CONTACT</h1>
         <h1 className="font-semibold text-xl text-colors-black text-start  mt-5">You can contact us directly 

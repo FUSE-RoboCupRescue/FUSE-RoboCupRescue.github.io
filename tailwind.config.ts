@@ -12,6 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         colors: {
+          white_base: '#FFFFFF',
           white: '#d5cdd4',
           black: '#010101',
           grey_light: '#aba4aa',
@@ -22,7 +23,8 @@ const config: Config = {
       },
       fontFamily: {
         aileron: ['aileron', 'sans-serif'],
-        serif: ['Helvetica']
+        helvetica: ['Helvetica'],
+        roboto: ['Roboto', 'sans-serif'],
       },
     },
   },

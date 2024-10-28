@@ -32,7 +32,7 @@ export default function Header() {
     }, []);
 
     return(
-    <section className={`font-aileron font-light z-50 sticky top-0 transition-colors duration-300 ${isScrolled ? 'bg-colors-grey_dark/70' : 'bg-colors-black'}`}>        
+    <section className={`font-helvetica font-light z-50 sticky top-0 transition-colors duration-300 ${isScrolled ? 'bg-colors-grey_dark/70' : 'bg-colors-black'}`}>        
     <nav className="text-white text-lg py-4 px-7">
             <div className='flex justify-between'>
                 <ul className="grid grid-flow-col gap-10 text-center items-center uppercase">

@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     <body className='bg-colors-grey_light'>
+     <body className='bg-colors-white'>
      <div className='flex justify-between bg-colors-grey_dark py-5' id="banner">
         <Image 
         src="./banner_left.png"

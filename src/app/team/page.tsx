@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col my-5 mx-[25rem] font-aileron">
+    <div className="flex flex-col my-5 mx-[25rem] font-helvetica">
 
       <h1 className="font-bold text-7xl text-colors-black text-center">TEAM</h1>
 
@@ -18,21 +18,16 @@ export default function Home() {
       </div>
 
 
-      <div className="font-normal text-lg mt-5">
+      <div className="mt-5">
         <p>Our team is made up of dedicated students from TU Berlin, each bringing expertise in a variety of fields, including: </p>
-        <ul className="list-disc ml-10">
+        <ul className="list-disc">
           <li>Woraphon Choaywong, B.Sc. Computer Engineering</li>
           <li>Denis Shcherba, M.Sc. Computer Engineering</li>
           <li>Eckart Cobo Briesewitz, B.Sc. Computer Science</li>
           <li>Patthicha Mahakijdechachai, B.Sc. Industrial Engineering</li>
           <li>Harry Bason, B.Sc. Mechanical Engineering</li>
           <li>Phumin Lertpredanan, B.Sc. Electrical Engineering</li>
-        </ul>
-        <p>We are developing a rescue robot to compete in the upcoming RoboCup competition. 
-          This event will also serve as an opportunity to test the robot's capabilities and assess whether it is ready for real-life applications.
-        </p>
-
-        <p>More information of the competition can be found <Link href="https://rrl.robocup.org/league-overview/" target="_blank" className="underline underline-offset-1 text-colors-grey_medium">here</Link></p> 
+        </ul>       
       </div>
     </div>
     
