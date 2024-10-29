@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col my-5 mx-[25rem] font-helvetica">
+    <div className="flex flex-col my-5 xl:mx-[25rem] font-helvetica">
 
     {/* <h1 className="font-bold text-7xl text-colors-black text-center">Team FUSE</h1> */}
 
