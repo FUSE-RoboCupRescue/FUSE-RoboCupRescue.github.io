@@ -22,14 +22,14 @@ export default function RootLayout({
         src="./banner_left.png"
         width={500}
         height={200}
-        className="max-h-[100px] max-w-[250px] md:max-w-[300px] lg:max-h-[200px] lg:max-w-[500px] object-contain top-0 left-0"
+        className="max-h-[50px] max-w-[200px] sm:max-h-[100px] sm:max-w-[250px] md:max-w-[300px] lg:max-h-[200px] lg:max-w-[500px] object-contain top-0 left-0"
         alt="banner_left" />
 
         <Image 
         src="./banner_right.png"
         width={350}
         height={200}
-        className="max-h-[100px] max-w-[200px] md:max-w-[250px] lg:max-h-[200px] lg:max-w-[350px] object-contain top-0 left-0"
+        className="max-h-[50px] max-w-[150px] sm:max-h-[100px] sm:max-w-[200px] md:max-w-[250px] lg:max-h-[200px] lg:max-w-[350px] object-contain top-0 left-0"
         alt="banner_right" />
       </div>
      <Header></Header>

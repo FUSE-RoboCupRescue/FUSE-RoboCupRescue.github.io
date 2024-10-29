@@ -48,7 +48,7 @@ export default function Header() {
             </nav>
             </section>
             <section className={`flex lg:hidden font-helvetica font-light z-50 sticky top-0 bg-colors-black justify-between py-8 px-7`}>        
-            <nav className="flex flex-col justify-between text-white text-lg">
+            <nav className="flex flex-col justify-between text-white text-sm sm:text-lg">
                     <div className={isNavOpen ? "hidden" : "flex flex-col space-y-2"}
                         onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
                     >

@@ -1,17 +1,17 @@
 
 export default function Home() {
   return (
-    <div className="flex flex-col my-5 mx-[25rem] font-helvetica">
-      <div className="flex flex-col text-sm justify-center items-center mt-5">
-        {/* Andere Inhalte hier */}
+    <div className="flex flex-col my-5 xl:mx-[25rem] font-helvetica">
+      {/* <div className="flex flex-col text-sm justify-center items-center mt-5">
+        
       </div>
 
       <div className="font-normal text-lg mt-5">
-        {/* Andere Inhalte hier */}
-      </div>
+        
+      </div>  */}
 
-      <footer className="mt-10 text-sm">
-        <section className="px-4 md:px-"id="impressum">
+      <footer className="text-sm">
+        <section className="px-4 md:px-8"id="impressum">
           <h2 className="font-bold text-3xl text-colors-black text-center mt-8">Impressum</h2>
           <p>Angaben gemäß § 5 TMG</p>
           <p>
