@@ -21,7 +21,7 @@ export default function Home() {
         <ul className="px-4 md:px-8 list-disc">
           <li>Woraphon Choaywong, B.Sc. Computer Engineering</li>
           <li>Denis Shcherba, M.Sc. Computer Engineering</li>
-          <li>Eckart Cobo Briesewitz, B.Sc. Computer Science</li>
+          <li>Eckart Cobo Briesewitz, M.Sc. Computer Science</li>
           <li>Patthicha Mahakijdechachai, B.Sc. Industrial Engineering</li>
           <li>Harry Bason, B.Sc. Mechanical Engineering</li>
           <li>Phumin Lertpredanan, B.Sc. Electrical Engineering</li>
