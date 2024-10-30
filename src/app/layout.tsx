@@ -19,9 +19,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="./favicon.ico" />
-      </head>
       <body className='bg-colors-white'>
         <div className='flex justify-between bg-colors-grey_dark py-5' id="banner">
           <Image 
