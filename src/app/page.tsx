@@ -18,7 +18,7 @@ export default function Home() {
       </div>
 
 
-      <div className="text-base mt-5 space-y-8">
+      <div className="text-sm md:text-base mt-5 space-y-8">
       <h1 className="font-bold text-3xl text-colors-black text-center pt-8">What is RoboCup Rescue?</h1>
         <p className="text-start px-4 md:px-8">
         The league’s primary goal is to conduct rigorous, fair competitions that guide teams on essential tasks for effective responder support. 

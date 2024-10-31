@@ -11,8 +11,8 @@ export default function Home() {
       </div>  */}
 
       <footer className="text-sm">
-        <section className="px-4 md:px-8"id="impressum">
-          <h2 className="font-bold text-3xl text-colors-black text-center mt-8">Impressum</h2>
+        <section className="px-4 md:px-8" id="impressum">
+          <h2 className="font-bold text-3xl text-colors-black text-center">Impressum</h2>
           <p>Angaben gemäß § 5 TMG</p>
           <p>
             <strong>FUSE e.V.</strong><br />

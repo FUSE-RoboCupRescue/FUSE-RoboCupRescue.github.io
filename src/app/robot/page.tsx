@@ -6,7 +6,7 @@ export default function Home() {
 
     <div className="flex flex-col my-5 xl:mx-[25rem] font-helvetica space-y-8">
 
-    <h1 className="font-bold text-7xl text-colors-black text-center">ROBOT</h1>
+    <h1 className="font-bold  text-5xl md:text-7xl text-colors-black text-center">ROBOT</h1>
 
     
       <div className="flex flex-col text-sm justify-center items-center">
@@ -18,7 +18,7 @@ export default function Home() {
           alt="robotPHRYNE" />
       </div>
 
-      <div className="px-4 xl:px-0 mt-5">
+      <div className="px-4 xl:px-0 mt-5 text-sm md:text-base">
           <p>
             Our robot, designed to compete in the 2025 German RoboCup Rescue category, is built for handling catastrophic and challenging situations. 
             Equipped with robust tracks and flippers, it can navigate complex terrains, such as rubble or collapsed buildings, often found in disaster zones. 

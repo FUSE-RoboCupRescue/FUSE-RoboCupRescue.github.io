@@ -4,9 +4,9 @@ export default function Home() {
   return (
     <div className="flex flex-col my-5 xl:mx-[25rem] font-helvetica space-y-8">
 
-      <h1 className="font-bold text-7xl text-colors-black text-center">TEAM</h1>
+      <h1 className="font-bold text-5xl md:text-7xl text-colors-black text-center">TEAM</h1>
 
-      <div className="flex flex-col text-sm justify-center items-center font-normal">
+      <div className="flex flex-col text-xs md:text-sm justify-center items-center font-normal">
           <Image 
             src="./team_lowres.jpg"
             width={1080}
@@ -16,7 +16,7 @@ export default function Home() {
           <h1 className="px-2 md:px-4">From left to right: Eckart, Denis, Woraphon, Phumin, Harry (Not included in the image: Patthicha)</h1>
       </div>
 
-      <div className="px-4 md:px-8 mt-5">
+      <div className="px-4 md:px-8 mt-5 text-sm md:text-base">
         <p>Our team is made up of dedicated students from TU Berlin, each bringing expertise in a variety of fields, including: </p>
         <ul className="px-4 md:px-8 list-disc">
           <li>Woraphon Choaywong, B.Sc. Computer Engineering</li>
