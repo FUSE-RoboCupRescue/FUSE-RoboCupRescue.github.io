@@ -10,11 +10,11 @@ export default function Home() {
     
       <div className="flex flex-col text-sm justify-center items-center mt-5">
         <Image 
-          src="./robot_lowres.jpg"
+          src="./team_event.jpg"
           width={1080}
           height={1080}
           className="flex max-h-[270px] max-w-[270px] sm:max-h-[360px] sm:max-w-[360px] md:max-h-[540px] md:max-w-[540px] object-contain border-4 border-colors-grey_dark"
-          alt="robotPHRYNE" />
+          alt="teamv2" />
       </div>
 
 
@@ -33,24 +33,77 @@ export default function Home() {
 
         <h1 className="font-bold text-3xl text-colors-black text-center">Who are we?</h1>
         <p className="text-start px-4 md:px-8">
-          We are <strong>FUSE</strong>, a dedicated team of students from the Technical University of Berlin, working together to push the boundaries of robotics technology.
-          We are currently focused on developing an innovative robot to participate in the upcoming 
-          <strong> RoboCup Rescue 2025 competition</strong> in March 2025.
+          We are <strong>FUSE</strong>, a dedicated team of students mostly from the Technical University of Berlin, working together to push the boundaries of robotics technology.
+          We are currently focused on developing an innovative robot to participate in the 
+          <strong> RoboCup Rescue competition</strong>.
         </p>
 
-        <h1 className="font-bold text-3xl text-colors-black text-center mt-8">Our Mission</h1>
+        <h1 className="font-bold text-3xl text-colors-black text-center mt-8">RoboCup Rescue German Open 2026 Cologne Results</h1>
         <p className="text-start px-4 md:px-8">
-            Our primary goal is to design and build a robotic system capable of functioning effectively in emergency situations, such as natural disasters, search-and-rescue 
-            operations, and hostage scenarios. We envision a robot that can not only withstand challenging environments but also provide invaluable support to first responders, 
-            making rescue efforts faster, safer, and more effective.
+            We have successfully developed our first prototype in time for the competition. Although there were many problems, our robot performed better than expected.
+            We have learned a lot from our mistake in this run and are already working on the second version of the robot that will outperform our first prototype.
         </p>
 
-        <h1 className="font-bold text-3xl text-colors-black text-center mt-8">Our Vision</h1>
-        <p className="text-start px-4 md:px-8">
-            Our robot is intended to represent the future of emergency response technology. With advanced mobility features like tracks and flippers, alongside a versatile, 
-            mounted robotic arm, it is built to navigate through debris, rough terrain, and tight spaces. We're aiming to create a solution that can directly aid in life-saving 
-            efforts during critical rescue missions and be a dependable tool for those on the front lines in challenging, high-stakes scenarios.
+        <div className="text-start px-4 md:px-8">
+        For videos of the robot running, please see here: 
+        <p>
+          Avoid holes test:{" "}
+          <a 
+            href="https://youtu.be/VJRG4qPT850" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-500 underline"
+          >
+            Watch video
+          </a>
         </p>
+
+        <p>
+          Palettes and Pipes:{" "}
+          <a 
+            href="https://www.youtube.com/live/ut5msmKrLlE?si=Y8ApHig51dyR_iWv&t=15750"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-500 underline"
+          >
+            Watch video
+          </a>
+        </p>
+      </div>
+
+        <div className="flex justify-center items-center gap-4 mt-5 flex-wrap">
+          <Image 
+            src="./robot1.jpg"
+            width={1080}
+            height={1080}
+            className="w-1/3 max-h-[270px] sm:max-h-[360px] md:max-h-[540px] object-contain border-4 border-colors-grey_dark"
+            alt="robot1"
+          />
+          <Image 
+            src="./robot2.jpg"
+            width={1080}
+            height={1080}
+            className="w-1/3 max-h-[270px] sm:max-h-[360px] md:max-h-[540px] object-contain border-4 border-colors-grey_dark"
+            alt="robot2"
+          />
+        </div>
+
+        <div className="flex justify-center items-center gap-4 mt-5 flex-wrap">
+          <Image 
+            src="./robot3.jpg"
+            width={1080}
+            height={1080}
+            className="w-1/3 max-h-[270px] sm:max-h-[360px] md:max-h-[540px] object-contain border-4 border-colors-grey_dark"
+            alt="robot3"
+          />
+          <Image 
+            src="./robot4.jpg"
+            width={1080}
+            height={1080}
+            className="w-1/3 max-h-[270px] sm:max-h-[360px] md:max-h-[540px] object-contain border-4 border-colors-grey_dark"
+            alt="robot4"
+          />
+        </div>
 
         <h1 className="font-bold text-3xl text-colors-black text-center mt-8">Searching for Sponsors</h1>
         <p className="text-start px-4 md:px-8">

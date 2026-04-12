@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col 2xl:mx-[25rem] my-5 font-helvetica relative">
-      <h1 className="font-bold text-5xl md:text-7xl text-colors-black text-center">SPONSORS</h1>
+      <h1 className="font-bold text-3xl md:text-4xl text-colors-black text-center">SPONSORS</h1>
 
       {/* Static Sponsor Message */}
       <div className={showDialog ? "fixed bottom-0 right-0 lg:mb-10 lg:mr-10 bg-blue-600 bg-opacity-80 text-white p-6 rounded-lg shadow-lg lg:w-[300px]" : 'hidden'}>
