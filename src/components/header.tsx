@@ -1,126 +1,93 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { navItems } from "@/data/site";
+import { asset } from "@/lib/asset";
+
+const isActive = (pathname: string, href: string) =>
+  href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
 
 export default function Header() {
-    const [language, setLanguage] = useState('EN');
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isNavOpen, setIsNavOpen] = useState(false);
+  const pathname = usePathname() ?? "/";
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
-    const handleLanguageChange = (lang: string) => {
-        setLanguage(lang);
-        // Here, you can implement additional logic to change the website's language, such as updating a language context or using i18n libraries.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close the menu after navigating, and on Escape
+  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
     };
+  }, [open]);
 
-    useEffect(() => {
-        const banner = document.getElementById('banner');
-        if (!banner) return;
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                // Set isScrolled to true if the banner is not intersecting (out of view)
-                setIsScrolled(!entry.isIntersecting);
-            },
-            {
-                root: null, 
-                threshold: 0, 
-            }
-        );
-        observer.observe(banner);
-        return () => {
-            observer.disconnect();
-        };
-    }, []);
+  return (
+    <>
+      <header className="site-header" data-solid={scrolled || open}>
+        <div className="container site-header__inner">
+          <Link href="/" className="brand" aria-label="FUSE home">
+            <img src={asset("/img/fuse-logo.webp")} alt="FUSE" width={362} height={120} />
+          </Link>
 
-    return(
-    <section>
-        <section className={`hidden lg:flex font-helvetica font-light z-50 sticky top-0 transition-colors duration-300 ${isScrolled ? 'bg-colors-grey_dark/70' : 'bg-colors-black'}`}>        
-        <nav className="text-white text-lg py-4 px-7">
-                <div className='flex justify-between'>
-                    <ul className="grid grid-flow-col gap-10 text-center items-center uppercase">
-                        <li><Link href="/" data-translate="nav-home">Home</Link></li>
-                        <li><Link href="/team" data-translate="nav-team">The Team</Link></li>
-                        <li><Link href="/robot" data-translate="nav-robots">Robots</Link></li>
-                        <li><Link href="/sponsors" data-translate="nav-sponsors">Sponsors</Link></li> 
-                        <li><Link href="/contact" data-translate="nav-contact">Contact</Link></li>
-                    </ul>
-                </div>
-            </nav>
-            </section>
-            <section className={`flex lg:hidden font-helvetica font-light z-50 sticky top-0 bg-colors-black justify-between py-8 px-7`}>        
-            <nav className="flex flex-col justify-between text-white text-sm sm:text-lg">
-                    <div className={isNavOpen ? "hidden" : "flex flex-col space-y-2"}
-                        onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
-                    >
-                        <span className="block h-0.5 w-8 animate-pulse bg-colors-white"></span>
-                        <span className="block h-0.5 w-8 animate-pulse bg-colors-white"></span>
-                        <span className="block h-0.5 w-8 animate-pulse bg-colors-white"></span>
-                    </div>
-                    <div className={isNavOpen ? "pb-5" : "hidden"} onClick={() => setIsNavOpen(false)} > 
-                        <svg
-                            className="h-8 w-8 text-colors-white"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <line x1="18" y1="6" x2="6" y2="18" />
-                            <line x1="6" y1="6" x2="18" y2="18" />
-                        </svg>
-                    </div>
-                    <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}> 
-                        <ul className="grid grid-flow-row gap-10 text-start uppercase mt-4" onClick={() => setIsNavOpen(false)}>
-                            <li><Link href="/" data-translate="nav-home">Home</Link></li>
-                            <li><Link href="/team" data-translate="nav-team">The Team</Link></li>
-                            <li><Link href="/robot" data-translate="nav-robots">Robots</Link></li>
-                            <li><Link href="/sponsors" data-translate="nav-sponsors">Sponsors</Link></li> 
-                            <li><Link href="/contact" data-translate="nav-contact">Contact</Link></li>
-                        </ul> 
-                    </div> 
-                       
-                        
-            </nav>
-            <style>{`
-                    .hideMenuNav {
-                        display: none;
-                    }
-                    .showMenuNav {
-                        display: block;
-                        width: 100%;
-                        height: max-content;
-                        top: 0;
-                        left: 0;
-                        z-index: 10;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-evenly;
-                        align-items: center;
-                    }
-                    `}</style>
-            </section>
-        </section>
-        
-    );
+          <nav className="nav-desktop" aria-label="Main">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="nav-link"
+                aria-current={isActive(pathname, item.href) ? "page" : undefined}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link href="/sponsors#support" className="button button--primary button--small nav-cta">
+              Support us
+            </Link>
+          </nav>
+
+          <button
+            type="button"
+            className="menu-button"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className="menu-button__bars" aria-hidden>
+              <span />
+              <span />
+              <span />
+            </span>
+          </button>
+        </div>
+      </header>
+
+      <nav id="mobile-menu" className="mobile-menu" data-open={open} aria-label="Main" aria-hidden={!open}>
+        {navItems.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            tabIndex={open ? undefined : -1}
+            aria-current={isActive(pathname, item.href) ? "page" : undefined}
+            onClick={() => setOpen(false)}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+    </>
+  );
 }
-
-
-// {/* <div className='className="language-switch flex space-x-2 text-xl'>
-//                             {/* <button
-//                                 className={`px-4 py-2 rounded ${
-//                                 language === 'EN' ? 'bg-gray-200 text-black' : 'bg-colors-grey_dark text-white'
-//                                 }`}
-//                                 onClick={() => handleLanguageChange('EN')}
-//                             >
-//                                 EN
-//                             </button>
-//                             <button
-//                                 className={`px-4 py-2 rounded ${
-//                                 language === 'DE' ? 'bg-gray-200 text-black' : 'bg-colors-grey_dark text-white' 
-//                                 }`}
-//                                 onClick={() => handleLanguageChange('DE')}
-//                             >
-//                                 DE
-//                             </button> */}
-//                             </div> */}

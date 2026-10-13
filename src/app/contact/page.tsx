@@ -1,103 +1,61 @@
-import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
+import { contactEmail, team } from "@/data/site";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Get in touch with FUSE, the RoboCup Rescue team from TU Berlin.",
+};
+
+export default function Contact() {
+  const leader = team[0];
   return (
-
-    <div className="flex flex-col md:mx-[3rem] 2xl:mx-[25rem] my-5 font-helvetica">
-
-        <h1 className="font-bold text-3xl md:text-4xl text-colors-black text-center">CONTACT</h1>
-        <h1 className="font-semibold text-base md:text-xl text-colors-black text-center md:text-start  mt-5">You can contact us directly 
-            at <Link href='mailto:robotechfuse@gmail.com' className="underline underline-offset-1 text-colors-grey_medium">robotechfuse@gmail.com</Link>
-        </h1>
-
-        <h1 className="font-semibold text-2xl md:text-4xl text-colors-black text-center md:text-start  mt-5">Team Members' Contact </h1>
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 md:grid-rows-2 my-5 font-normal">
-      
-            <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
-            <Image 
-                src="./phoo.png"
-                width={640}
-                height={640}
-                className="max-h-[270px] max-w-[270px] md:max-h-[320px] md:max-w-[320px] object-contain top-0 left-0"
-                alt="person1" />
-            <h1>Woraphon Choaywong</h1>
-            <h1>Team Leader</h1>
-            <Link href='mailto:w.choaywong@campus.tu-berlin.de'>w.choaywong@campus.tu-berlin.de</Link>
-            </div>
-
-            <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
-            <Image 
-                src="./denis.png"
-                width={640}
-                height={640}
-                className="max-h-[270px] max-w-[270px] md:max-h-[320px] md:max-w-[320px] object-contain top-0 left-0"
-                alt="person2" />
-            <h1>Denis Shcherba</h1>
-            <h1>Programming</h1>
-            <Link href='mailto:d.shcherba@campus.tu-berlin.de'>d.shcherba@campus.tu-berlin.de</Link>
-            </div>
-
-            <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
-            <Image 
-                src="./eckart.png"
-                width={640}
-                height={640}
-                className="max-h-[270px] max-w-[270px] md:max-h-[320px] md:max-w-[320px] object-contain top-0 left-0"
-                alt="person3" />
-            <h1>Eckart Cobo Briesewitz</h1>
-            <h1>Programming</h1>
-            <Link href='mailto:cobo-briesewitz@campus.tu-berlin.de'>cobo-briesewitz@campus.tu-berlin.de</Link>
-            </div>
-
-            <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
-            <Image 
-                src="./savita.png"
-                width={640}
-                height={640}
-                className="max-h-[270px] max-w-[270px] md:max-h-[320px] md:max-w-[320px] object-contain top-0 left-0"
-                alt="person4" />
-            <h1>Savita Tangvituvanich</h1>
-            <h1>Organistaion</h1>
-            <Link href='mailto:robotechfuse@gmail.com'>robotechfuse@gmail.com</Link>
-            </div>
-
-            <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
-            <Image 
-                src="./harry.png"
-                width={640}
-                height={640}
-                className="max-h-[270px] max-w-[270px] md:max-h-[320px] md:max-w-[320px] object-contain top-0 left-0"
-                alt="person3" />
-            <h1>Harry Bason</h1>
-            <h1>Mechanical Design</h1>
-            <Link href='mailto:h.bason@campus.tu-berlin.de'>h.bason@campus.tu-berlin.de</Link>
-            </div>
-
-            <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
-            <Image 
-                src="./phumin.png"
-                width={640}
-                height={640}
-                className="max-h-[270px] max-w-[270px] md:max-h-[320px] md:max-w-[320px] object-contain top-0 left-0"
-                alt="person4" />
-            <h1>Phumin Lertpredanan</h1>
-            <h1>Electronics Design</h1>
-            <Link href='mailto:p.lertpredanan@campus.tu-berlin.de'>p.lertpredanan@campus.tu-berlin.de</Link>
-            </div>
-
-            <div className="flex flex-col items-center border-4 border-colors-grey_medium rounded max-w-[350px] my-3 justify-self-center bg-colors-white transition-transform duration-300 hover:scale-110">
-            <Image 
-                src="./manassawin.png"
-                width={640}
-                height={640}
-                className="max-h-[270px] max-w-[270px] md:max-h-[320px] md:max-w-[320px] object-contain top-0 left-0"
-                alt="person5" />
-            <h1>Manassawin Vessugunmanugul</h1>
-            <h1>Mechanical and Programming</h1>
-            {/* <Link href='mailto:p.lertpredanan@campus.tu-berlin.de'>p.lertpredanan@campus.tu-berlin.de</Link> */}
-            </div>
+    <>
+      <header className="page-head">
+        <div className="container">
+          <h1 className="display">Contact</h1>
+          <p className="lead">Questions, sponsoring, or want to join? Write to us.</p>
+          <a className="contact-mail" href={`mailto:${contactEmail}`}>
+            {contactEmail}
+          </a>
         </div>
-    </div>
+      </header>
+
+      <section className="section">
+        <div className="container contact-cards">
+          <div className="contact-card">
+            <h2>Team leader</h2>
+            <p>
+              {leader.name}
+              <br />
+              <a href={`mailto:${leader.email}`}>{leader.email}</a>
+            </p>
+          </div>
+          <div className="contact-card">
+            <h2>Lab</h2>
+            <address>
+              Marchstr. 23, MAR 4-4, Room 4.025
+              <br />
+              10587 Berlin
+            </address>
+            <a
+              className="button button--ghost button--small"
+              href="https://www.openstreetmap.org/search?query=Marchstra%C3%9Fe%2023%2C%2010587%20Berlin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in map
+            </a>
+          </div>
+          <div className="contact-card">
+            <h2>Team members</h2>
+            <p>Every member's email is on the team page.</p>
+            <Link className="button button--ghost button--small" href="/team">
+              Go to the team page
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

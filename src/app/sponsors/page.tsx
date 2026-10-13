@@ -1,78 +1,82 @@
-"use client";
+import type { Metadata } from "next";
+import { Mail } from "@/components/icons";
+import { contactEmail, sponsors } from "@/data/site";
+import { asset } from "@/lib/asset";
 
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+export const metadata: Metadata = {
+  title: "Sponsors",
+  description: "The organisations supporting FUSE, and how your company can sponsor our RoboCup Rescue robot.",
+};
 
-export default function Home() {
+const benefits = [
+  {
+    title: "Your products, at work",
+    text: "Show what your components can do inside a robot built for some of the hardest terrain in robotics competitions.",
+  },
+  {
+    title: "Your logo, on the field",
+    text: "We feature sponsor logos on our team jerseys and on the robot itself, at every competition and event.",
+  },
+  {
+    title: "A live demo at your event",
+    text: "We can bring the robot to one of your events and show your products in action.",
+  },
+];
 
-  const [showDialog, setShowDialog] = useState(true);
-
-
+export default function Sponsors() {
+  const mail = `mailto:${contactEmail}?subject=${encodeURIComponent("Sponsoring FUSE")}`;
   return (
-    <div className="flex flex-col 2xl:mx-[25rem] my-5 font-helvetica relative">
-      <h1 className="font-bold text-3xl md:text-4xl text-colors-black text-center">SPONSORS</h1>
+    <>
+      <header className="page-head">
+        <div className="container">
+          <h1 className="display">Sponsors</h1>
+          <p className="lead">These organisations make our work possible. Thank you.</p>
+        </div>
+      </header>
 
-      {/* Static Sponsor Message */}
-      <div className={showDialog ? "fixed bottom-0 right-0 lg:mb-10 lg:mr-10 bg-blue-600 bg-opacity-80 text-white p-6 rounded-lg shadow-lg lg:w-[300px]" : 'hidden'}>
-        {/* Close Button */}
-        <button
-          onClick={() => setShowDialog(false)}
-          className="absolute top-2 right-5 text-white text-4xl font-bold hover:text-gray-300"
-          aria-label="Close"
-        >
-          &times;
-        </button>
+      <section className="section--tight">
+        <div className="container">
+          <h2 className="visually-hidden">Current sponsors</h2>
+          <ul className="logo-wall">
+            {sponsors.map((s) => (
+              <li key={s.short}>
+                <a className="logo-tile" href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`${s.name} (opens in a new tab)`}>
+                  <img src={asset(s.logo)} alt="" loading="lazy" decoding="async" />
+                </a>
+                <p className="logo-tile__name">{s.name}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-        <h2 className="text-2xl font-bold mb-2">Sponsorship Opportunity</h2>
-        <p className="text-lg">
-          We are actively looking for sponsors to support our robotics team as we work towards our next competition! 
-          Your support helps us innovate, build, and compete. Join us in advancing robotics technology!
-        </p>
-      </div>
-
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 my-5">
-        <div className="flex flex-col items-center border-4 border-colors-grey_dark bg-colors-white_base rounded max-w-[350px] my-3 justify-self-center">
-          <Link href="https://argmin.lis.tu-berlin.de/" target="_blank">
-            <Image 
-              src="./lis_logo.png"
-              width={360}
-              height={360}
-              className="max-h-[270px] max-w-[270px] md:max-h-[360px] md:max-w-[360px] object-contain top-0 left-0 "
-              alt="LIS" />
-          </Link>
+      <section id="support" className="cta-band" aria-labelledby="support-title" style={{ scrollMarginTop: "var(--header-h)" }}>
+        <div className="container" style={{ paddingBlock: "clamp(56px, 8vw, 104px)" }}>
+          <div className="section-head">
+            <h2 id="support-title" className="h2">
+              Sponsor the next robot
+            </h2>
+            <p className="lead">
+              We're looking for sponsors for our next competition. Your support goes straight into parts, manufacturing
+              and travel.
+            </p>
+          </div>
+          <div className="benefits">
+            {benefits.map((b) => (
+              <div key={b.title} className="benefit">
+                <h3>{b.title}</h3>
+                <p>{b.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="button-row" style={{ marginTop: 40 }}>
+            <a href={mail} className="button button--primary">
+              <Mail />
+              Email us about sponsoring
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col items-center border-4 border-colors-grey_dark bg-colors-white_base rounded max-w-[350px] my-3 justify-self-center">
-          <Link href="https://www.tu.berlin/" target="_blank">
-            <Image 
-              src="./tub_logo.png"
-              width={360}
-              height={360}
-              className="max-h-[270px] max-w-[270px] md:max-h-[360px] md:max-w-[360px] object-contain top-0 left-0 "
-              alt="TUB" />
-          </Link>
-        </div>
-        <div className="flex flex-col items-center border-4 border-colors-grey_dark bg-colors-white_base rounded max-w-[350px] my-3 justify-self-center">
-          <Link href="https://www.maxongroup.com/de-de" target="_blank">
-            <Image 
-              src="./maxon_logo.png"
-              width={360}
-              height={360}
-              className="max-h-[270px] max-w-[270px] md:max-h-[360px] md:max-w-[360px] object-contain top-0 left-0 "
-              alt="maxon" />
-          </Link>
-        </div>
-        <div className="flex flex-col items-center border-4 border-colors-grey_dark bg-colors-white_base rounded max-w-[350px] my-3 justify-self-center">
-          <Link href="https://www.maedler.de/" target="_blank">
-            <Image 
-              src="./maedler_logo.png"
-              width={360}
-              height={360}
-              className="max-h-[270px] max-w-[270px] md:max-h-[360px] md:max-w-[360px] object-contain top-0 left-0 "
-              alt="maedler" />
-          </Link>
-        </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

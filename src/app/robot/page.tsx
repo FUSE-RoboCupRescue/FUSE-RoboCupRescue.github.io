@@ -1,60 +1,127 @@
-import Image from "next/image";
-import Link from "next/link";
+import type { Metadata } from "next";
+import SponsorBand from "@/components/sponsor-band";
+import { Download } from "@/components/icons";
+import { asset } from "@/lib/asset";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Robots",
+  description: "PHRYNE and TUBer: the two tracked rescue robots designed by FUSE for RoboCup Rescue.",
+};
+
+export default function Robots() {
   return (
-
-    <div className="flex flex-col my-5 xl:mx-[25rem] font-helvetica space-y-8">
-
-    <h1 className="font-bold  text-3xl md:text-4xl text-colors-black text-center">ROBOTS</h1>
-
-    <h1 className="font-bold">First Design: PHYRNE</h1>
-      <div className="flex flex-col text-sm justify-center items-center">
-        <Image 
-          src="./robot_lowres.jpg"
-          width={1080}
-          height={1080}
-          className="flex w-1/2 max-h-[270px] max-w-[270px] sm:max-h-[360px] sm:max-w-[360px] md:max-h-[540px] md:max-w-[540px] object-contain border-4 border-colors-grey_dark"
-          alt="robotPHRYNE" />
-      </div>
-
-      <div className="px-4 xl:px-0 mt-5 text-sm md:text-base">
-          <p>
-            Our robot, designed to compete in the 2025 German RoboCup Rescue category, is built for handling catastrophic and challenging situations. 
-            Equipped with robust tracks and flippers, it can navigate complex terrains, such as rubble or collapsed buildings, often found in disaster zones. 
-            Additionally, the robot features a mounted arm that can perform precise tasks, making it highly adaptable for use in rescue missions, 
-            including those involving hostage scenarios or hazardous environments. 
-            Its design is intended to enhance the speed and efficiency of emergency response teams in life-critical situations.
+    <>
+      <header className="page-head">
+        <div className="container">
+          <h1 className="display">Robots</h1>
+          <p className="lead">
+            Two designs so far. Each one is shaped by what we learned building the last, and by what we could afford to
+            make.
           </p>
-          <p>
-            We have also created this concept file for our robot <Link href='./RoboCupRescue_TDP_2025.pdf' target="_blank" className="underline underline-offset-1 text-colors-grey_medium">here</Link>.
-          </p>
-      </div>
-      
-    <h1 className="font-bold">Second Design: TUBer</h1>
-      <div className="flex flex-col text-sm justify-center items-center">
-        <Image 
-          src="./robot4.jpg"
-          width={1080}
-          height={1080}
-          className="flex w-1/2 max-h-[270px] max-w-[270px] sm:max-h-[360px] sm:max-w-[360px] md:max-h-[540px] md:max-w-[540px] object-contain border-4 border-colors-grey_dark"
-          alt="robotTUBer" />
-      </div>
+        </div>
+      </header>
 
-      <div className="px-4 xl:px-0 mt-5 text-sm md:text-base">
-          <p>
-              Due to budget constraints in our initial design, we decided to revise it to create a more cost-effective robot. 
-              As a result, we developed TUBer, a robot that consists of more components but is simpler to manufacture. 
-              Its materials are inexpensive and easy to source. We used aluminium as the primary material for the chassis and flippers, while all other components are either commercially off-the-shelf parts or 3D-printed.
-              In theory, the robot is capable of navigating all types of terrain. However, due to budget limitations and delivery time constraints, 
-              we were unable to obtain our preferred motors, which reduces the robot’s maneuverability.
-          </p>
-          {/* <p>
-            We have also created this concept file for our robot <Link href='./RoboCupRescue_TDP_2025.pdf' target="_blank" className="underline underline-offset-1 text-colors-grey_medium">here</Link>.
-          </p> */}
-      </div>
+      <section className="section">
+        <div className="container">
+          <article className="robot split split--media-left" aria-labelledby="phryne">
+            <div className="robot__media">
+              <div className="frame frame--43">
+                <img
+                  src={asset("/img/phryne-1080.webp")}
+                  srcSet={`${asset("/img/phryne-640.webp")} 640w, ${asset("/img/phryne-1080.webp")} 1080w`}
+                  sizes="(min-width: 900px) 58vw, 100vw"
+                  alt="CAD render of PHRYNE with teal tracks, four flippers and a mounted arm"
+                  width={1080}
+                  height={862}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="robot__stage">First design</p>
+              <h2 id="phryne" className="h2 robot__name">
+                PHRYNE
+              </h2>
+              <div className="prose robot__text">
+                <p>
+                  Designed for the 2025 German RoboCup Rescue competition, PHRYNE is built for disaster sites: rubble,
+                  collapsed buildings and other terrain that is hard to cross.
+                </p>
+                <p>
+                  Tracks and flippers carry it over obstacles, and a mounted arm handles precise tasks, so the same
+                  robot can support responders in many kinds of hazardous situations.
+                </p>
+              </div>
+              <dl className="facts">
+                <div>
+                  <dt>Drive</dt>
+                  <dd>Tracks with four flippers</dd>
+                </div>
+                <div>
+                  <dt>Manipulation</dt>
+                  <dd>Mounted arm for precise tasks</dd>
+                </div>
+              </dl>
+              <div className="button-row">
+                <a href={asset("/RoboCupRescue_TDP_2025.pdf")} className="button button--ghost" target="_blank" rel="noopener">
+                  <Download />
+                  Concept paper (PDF, 1.7 MB)
+                </a>
+              </div>
+            </div>
+          </article>
 
-  
-    </div>
+          <article className="robot robot--flip split split--media-left" aria-labelledby="tuber">
+            <div className="robot__media">
+              <div className="frame frame--43">
+                <img
+                  src={asset("/img/robot4-1600.webp")}
+                  srcSet={`${asset("/img/robot4-800.webp")} 800w, ${asset("/img/robot4-1600.webp")} 1600w`}
+                  sizes="(min-width: 900px) 58vw, 100vw"
+                  alt="TUBer in the plywood test arena with its flippers raised"
+                  width={1600}
+                  height={1200}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="robot__stage">Second design</p>
+              <h2 id="tuber" className="h2 robot__name">
+                TUBer
+              </h2>
+              <div className="prose robot__text">
+                <p>
+                  PHRYNE turned out to be too expensive to build, so we redesigned it to cost less. TUBer has more
+                  parts but is simpler to manufacture, and its materials are cheap and easy to source.
+                </p>
+                <p>
+                  In theory it can handle every kind of terrain. Budget limits and delivery times meant we couldn't get
+                  our preferred motors, which reduces its manoeuvrability for now.
+                </p>
+              </div>
+              <dl className="facts">
+                <div>
+                  <dt>Chassis and flippers</dt>
+                  <dd>Aluminium</dd>
+                </div>
+                <div>
+                  <dt>Everything else</dt>
+                  <dd>Off-the-shelf parts and 3D-printed components</dd>
+                </div>
+                <div>
+                  <dt>Competed at</dt>
+                  <dd>RoboCup Rescue German Open 2026, Cologne</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <SponsorBand />
+    </>
   );
 }

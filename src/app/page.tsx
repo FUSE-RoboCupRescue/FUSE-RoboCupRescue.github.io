@@ -1,122 +1,141 @@
-import Image from "next/image";
 import Link from "next/link";
+import Gallery from "@/components/gallery";
+import Video from "@/components/video";
+import SponsorBand from "@/components/sponsor-band";
+import { gallery, photo } from "@/data/site";
+import { asset } from "@/lib/asset";
 
 export default function Home() {
+  const hero = photo("robot4");
   return (
-    <div className="flex flex-col my-5 xl:mx-[25rem] font-helvetica">
-
-    {/* <h1 className="font-bold text-7xl text-colors-black text-center">Team FUSE</h1> */}
-
-    
-      <div className="flex flex-col text-sm justify-center items-center mt-5">
-        <Image 
-          src="./team_event.jpg"
-          width={1080}
-          height={1080}
-          className="flex max-h-[270px] max-w-[270px] sm:max-h-[360px] sm:max-w-[360px] md:max-h-[540px] md:max-w-[540px] object-contain border-4 border-colors-grey_dark"
-          alt="teamv2" />
-      </div>
-
-
-      <div className="text-sm md:text-base mt-5 space-y-8">
-      <h1 className="font-bold text-3xl text-colors-black text-center pt-8">What is RoboCup Rescue?</h1>
-        <p className="text-start px-4 md:px-8">
-        The league’s primary goal is to conduct rigorous, fair competitions that guide teams on essential tasks for effective responder support. 
-        Additionally, the league aims to track advancements in robotic systems to highlight significant capabilities that responders can easily recognize. 
-        Demonstrating a capability through ten or more successful trials suggests reliability. A range of trials across various tests helps evaluate the system comprehensively.
-        The RoboCup Rescue competition is organized similarly to Response Robot Exercises, which effectively convey capabilities between robot developers and responders. 
-        In the Preliminary round, each robot is assessed using standard and draft test methods to showcase functionality, reliability, operator skill, and autonomous or assistive abilities. Scores from this round qualify robots for a more complex scenario in the Finals, which enables concurrent testing for multiple robots and provides statistically meaningful performance data. 
-        The Finals encourage more complex and challenging tests, pushing robots beyond their typical limits to earn higher scores.
-        More information of the competition can be found <Link href="https://rrl.robocup.org/league-overview/" target="_blank" className="underline underline-offset-1 text-colors-grey_medium">here</Link>.
-        </p>
-
-
-        <h1 className="font-bold text-3xl text-colors-black text-center">Who are we?</h1>
-        <p className="text-start px-4 md:px-8">
-          We are <strong>FUSE</strong>, a dedicated team of students mostly from the Technical University of Berlin, working together to push the boundaries of robotics technology.
-          We are currently focused on developing an innovative robot to participate in the 
-          <strong> RoboCup Rescue competition</strong>.
-        </p>
-
-        <h1 className="font-bold text-3xl text-colors-black text-center mt-8">RoboCup Rescue German Open 2026 Cologne Results</h1>
-        <p className="text-start px-4 md:px-8">
-            We have successfully developed our first prototype in time for the competition. Although there were many problems, our robot performed better than expected.
-            We have learned a lot from our mistake in this run and are already working on the second version of the robot that will outperform our first prototype.
-        </p>
-
-        <div className="text-start px-4 md:px-8">
-        For videos of the robot running, please see here: 
-        <p>
-          Avoid holes test:{" "}
-          <a 
-            href="https://youtu.be/VJRG4qPT850" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-blue-500 underline"
-          >
-            Watch video
-          </a>
-        </p>
-
-        <p>
-          Palettes and Pipes:{" "}
-          <a 
-            href="https://www.youtube.com/live/ut5msmKrLlE?si=Y8ApHig51dyR_iWv&t=15750"
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-blue-500 underline"
-          >
-            Watch video
-          </a>
-        </p>
-      </div>
-
-        <div className="flex justify-center items-center gap-4 mt-5 flex-wrap">
-          <Image 
-            src="./robot1.jpg"
-            width={1080}
-            height={1080}
-            className="w-1/3 max-h-[270px] sm:max-h-[360px] md:max-h-[540px] object-contain border-4 border-colors-grey_dark"
-            alt="robot1"
-          />
-          <Image 
-            src="./robot2.jpg"
-            width={1080}
-            height={1080}
-            className="w-1/3 max-h-[270px] sm:max-h-[360px] md:max-h-[540px] object-contain border-4 border-colors-grey_dark"
-            alt="robot2"
+    <>
+      <section className="hero">
+        <div className="hero__media">
+          <img
+            src={asset(hero.src)}
+            srcSet={hero.srcSet.replace(/\/img\//g, asset("/img/"))}
+            sizes="100vw"
+            alt="TUBer, our tracked rescue robot, inside the plywood test arena"
+            width={1600}
+            height={1200}
+            {...{ fetchPriority: "high" as const }}
           />
         </div>
-
-        <div className="flex justify-center items-center gap-4 mt-5 flex-wrap">
-          <Image 
-            src="./robot3.jpg"
-            width={1080}
-            height={1080}
-            className="w-1/3 max-h-[270px] sm:max-h-[360px] md:max-h-[540px] object-contain border-4 border-colors-grey_dark"
-            alt="robot3"
-          />
-          <Image 
-            src="./robot4.jpg"
-            width={1080}
-            height={1080}
-            className="w-1/3 max-h-[270px] sm:max-h-[360px] md:max-h-[540px] object-contain border-4 border-colors-grey_dark"
-            alt="robot4"
-          />
+        <div className="container hero__content">
+          <h1 className="display hero__title">Rescue robots, built by students at TU&nbsp;Berlin.</h1>
+          <p className="lead hero__lead">
+            We are FUSE. We design and build tracked robots for the RoboCup Rescue League, where robots are tested on
+            the tasks emergency responders need help with.
+          </p>
+          <div className="button-row">
+            <Link href="/robot" className="button button--primary">
+              Meet the robots
+            </Link>
+            <Link href="/sponsors" className="button button--ghost">
+              Become a sponsor
+            </Link>
+          </div>
         </div>
+      </section>
 
-        <h1 className="font-bold text-3xl text-colors-black text-center mt-8">Searching for Sponsors</h1>
-        <p className="text-start px-4 md:px-8">
-            We are actively looking for sponsors to support our project. Partnering with us offers several benefits for your business, including:
-        </p>
-        <ul className="list-disc ml-10 space-y-1.5 text-start px-4 md:px-8 pb-8">
-            <li>Showcasing your company and its high-quality products through our innovative robot</li>
-            <li>Featuring your company logo on our team jerseys and the robot itself</li>
-            <li>Presenting the robot at one of your events to demonstrate the capabilities of your products</li>
-        </ul>
-      </div>
+      <section className="section">
+        <div className="container split">
+          <div className="section-head">
+            <h2 className="h2">What is RoboCup Rescue?</h2>
+          </div>
+          <div>
+            <div className="prose">
+              <p>
+                The RoboCup Rescue Robot League runs rigorous, fair competitions built around the tasks that matter to
+                emergency responders. It also tracks how robotic systems improve over time, so responders can see which
+                capabilities are ready for real use.
+              </p>
+              <p>
+                Robots are scored on standard test methods for mobility, manipulation, operator skill and autonomy. A
+                capability shown in ten or more successful trials counts as reliable. The best scores from the
+                preliminary round qualify for harder, combined scenarios in the finals.
+              </p>
+            </div>
+            <dl className="facts" style={{ marginTop: 32 }}>
+              <div>
+                <dt>Preliminaries</dt>
+                <dd>Standard and draft test methods check function, reliability, operator skill and autonomy.</dd>
+              </div>
+              <div>
+                <dt>Finals</dt>
+                <dd>Harder, combined scenarios where several robots are tested at the same time.</dd>
+              </div>
+              <div>
+                <dt>Learn more</dt>
+                <dd>
+                  <a className="text-link" href="https://rrl.robocup.org/league-overview/" target="_blank" rel="noopener noreferrer">
+                    League overview at rrl.robocup.org
+                  </a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
 
-    </div>
+      <section className="section section--panel">
+        <div className="container">
+          <div className="section-head">
+            <h2 className="h2">German Open 2026, Cologne</h2>
+            <p className="lead">
+              We finished our first prototype just in time for the competition. Despite plenty of problems, the robot
+              performed better than we expected. We learned a lot from this run and are already building a second
+              version.
+            </p>
+          </div>
 
+          <div className="videos">
+            <Video id="VJRG4qPT850" title="Avoid holes test" poster="/img/robot1-800.webp" />
+            <Video id="ut5msmKrLlE" start={15750} title="Pallets and pipes test" poster="/img/robot3-800.webp" />
+          </div>
+          <p className="video-note">Videos play from YouTube when you start them.</p>
+
+          <div style={{ marginTop: 48 }}>
+            <h3 className="h3" style={{ marginBottom: 20 }}>
+              From the arena
+            </h3>
+            <Gallery items={gallery} />
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container split split--even">
+          <div className="frame frame--43">
+            <img
+              src={asset("/img/team-pic-800.webp")}
+              srcSet={`${asset("/img/team-pic-800.webp")} 800w, ${asset("/img/team-pic-1600.webp")} 1600w`}
+              sizes="(min-width: 900px) 50vw, 100vw"
+              alt="The FUSE team standing behind TUBer in the lab"
+              width={800}
+              height={600}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div className="section-head" style={{ marginBottom: 0 }}>
+            <h2 className="h2">Who we are</h2>
+            <div className="prose">
+              <p>
+                FUSE is a team of students, mostly from the Technical University of Berlin, working across mechanical
+                design, electronics and software. Together we are building a robot for the RoboCup Rescue competition.
+              </p>
+            </div>
+            <div className="button-row" style={{ marginTop: 12 }}>
+              <Link href="/team" className="button button--ghost">
+                Meet the team
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <SponsorBand />
+    </>
   );
 }

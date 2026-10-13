@@ -1,34 +1,66 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { team } from "@/data/site";
+import { asset } from "@/lib/asset";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Team",
+  description: "The students behind FUSE, the RoboCup Rescue team from TU Berlin.",
+};
+
+export default function Team() {
   return (
-    <div className="flex flex-col my-5 xl:mx-[25rem] font-helvetica space-y-8">
+    <>
+      <header className="page-head">
+        <div className="container">
+          <h1 className="display">Team</h1>
+          <p className="lead">
+            Students, mostly from TU Berlin, covering mechanical design, electronics and software.
+          </p>
+        </div>
+      </header>
 
-      <h1 className="font-bold text-3xl md:text-4xl text-colors-black text-center">TEAM</h1>
+      <section className="section--tight">
+        <div className="container">
+          <figure>
+            <div className="frame" style={{ aspectRatio: "16 / 9" }}>
+              <img
+                src={asset("/img/team-event-1600.webp")}
+                srcSet={`${asset("/img/team-event-800.webp")} 800w, ${asset("/img/team-event-1600.webp")} 1600w`}
+                sizes="(min-width: 1264px) 1200px, 100vw"
+                alt="The FUSE team kneeling and standing around TUBer in the competition hall"
+                width={1600}
+                height={1200}
+                style={{ objectPosition: "50% 45%" }}
+                decoding="async"
+              />
+            </div>
+            <figcaption className="caption">The team with TUBer in the competition hall.</figcaption>
+          </figure>
+        </div>
+      </section>
 
-      <div className="flex flex-col text-xs md:text-sm justify-center items-center font-normal">
-          <Image 
-            src="./team_pic.jpg"
-            width={1080}
-            height={1080}
-            className="max-h-[270px] max-w-[270px] sm:max-h-[360px] sm:max-w-[360px] md:max-h-[540px] md:max-w-[540px] object-contain top-0 left-0 border-4 border-colors-grey_dark"
-            alt="team_photo" />
-          <h1 className="px-2 md:px-4">From left to right: Phumin, Denis, Eckart, Manassawin, Woraphon, Harry (Not included in the image: Savita)</h1>
-      </div>
-
-      <div className="px-4 md:px-8 mt-5 text-sm md:text-base">
-        <p>Our team is made up of dedicated students mostly from TU Berlin, each bringing expertise in a variety of fields, including: </p>
-        <ul className="px-4 md:px-8 list-disc">
-          <li><b>Woraphon Choaywong</b>,         B.Sc. Computer Engineering</li>
-          <li><b>Denis Shcherba</b>,             PhD. Computer Engineering</li>
-          <li><b>Eckart Cobo Briesewitz</b>,     M.Sc. Computer Science</li>
-          <li><b>Harry Bason</b>,                B.Sc. Mechanical Engineering</li>
-          <li><b>Phumin Lertpredanan</b>,        B.Sc. Electrical Engineering</li>
-          <li><b>Manassawin Vessugunmanugul</b>, B.Sc. Computer Science (SRH Uni)</li>
-          <li><b>Savita Tangvituvanich</b>,      Ausbildung Fachinformatiker (ekvip Automation)</li>
-        </ul>       
-      </div>
-    </div>
-    
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <h2 className="visually-hidden">Members</h2>
+          <ul className="team-grid">
+            {team.map((m) => (
+              <li key={m.name} className="member">
+                <div className="member__photo">
+                  <img src={asset(m.photo)} alt={`Portrait of ${m.name}`} width={480} height={480} loading="lazy" decoding="async" />
+                </div>
+                <h3 className="member__name">{m.name}</h3>
+                <p className="member__role">{m.role}</p>
+                <p className="member__study">{m.study}</p>
+                {m.email && (
+                  <a className="member__mail" href={`mailto:${m.email}`}>
+                    {m.email}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </>
   );
 }
