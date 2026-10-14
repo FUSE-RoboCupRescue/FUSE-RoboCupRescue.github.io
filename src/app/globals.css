@@ -1212,6 +1212,26 @@ button {
   font-size: 14px;
 }
 
+.contact-social {
+  margin-top: 28px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--text);
+}
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  color: var(--orange);
+}
+.site-footer .social-link:hover {
+  color: var(--orange-soft);
+}
+
 /* ------------------------- Reduced motion ------------------------- */
 
 @media (prefers-reduced-motion: reduce) {

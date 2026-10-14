@@ -1,5 +1,10 @@
 export const contactEmail = "robotechfuse@gmail.com";
 
+export const instagram = {
+  handle: "@fuse_tub",
+  url: "https://www.instagram.com/fuse_tub/",
+};
+
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/robot", label: "Robots" },

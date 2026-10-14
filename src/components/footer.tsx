@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { contactEmail, navItems } from "@/data/site";
+import { contactEmail, instagram, navItems } from "@/data/site";
+import { Instagram } from "./icons";
 import { asset } from "@/lib/asset";
 
 export default function Footer() {
@@ -45,6 +46,11 @@ export default function Footer() {
             <p style={{ marginTop: 12 }}>
               <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
             </p>
+            <a className="social-link" href={instagram.url} target="_blank" rel="noopener noreferrer">
+              <Instagram />
+              {instagram.handle}
+              <span className="visually-hidden"> on Instagram (opens in a new tab)</span>
+            </a>
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { contactEmail, team } from "@/data/site";
+import { Instagram } from "@/components/icons";
+import { contactEmail, instagram, team } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -18,6 +19,12 @@ export default function Contact() {
           <a className="contact-mail" href={`mailto:${contactEmail}`}>
             {contactEmail}
           </a>
+          <p className="contact-social">
+            <a className="button button--ghost" href={instagram.url} target="_blank" rel="noopener noreferrer">
+              <Instagram />
+              Follow {instagram.handle} on Instagram
+            </a>
+          </p>
         </div>
       </header>
 
