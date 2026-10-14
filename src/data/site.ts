@@ -70,8 +70,8 @@ export const team: Member[] = [
 export const sponsors = [
   { name: "Learning & Intelligent Systems Lab, TU Berlin", short: "LIS", logo: "/img/lis-logo.webp", url: "https://argmin.lis.tu-berlin.de/" },
   { name: "Technische Universität Berlin", short: "TU Berlin", logo: "/img/tub-logo.webp", url: "https://www.tu.berlin/" },
-  { name: "maxon", short: "maxon", logo: "/img/maxon-logo.webp", url: "https://www.maxongroup.com/de-de" },
   { name: "Mädler", short: "Mädler", logo: "/img/maedler-logo.webp", url: "https://www.maedler.de/" },
+  { name: "Neugart", short: "Neugart", logo: "/img/neugart-logo.png", url: "https://www.neugart.com/de-de/" },
 ];
 
 /** Photo variants are generated at 800px and 1600px wide. */
